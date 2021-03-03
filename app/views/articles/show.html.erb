@@ -6,4 +6,10 @@
 <%= link_to "Delete", article_path(@article), method: :delete,
   data: { confirm: "Are you sure?" } %>
 
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add comment:</h2>
+<%= render "comments/form" %>
+
 <p><%= link_to "Go to Articles", articles_path %></p>
